@@ -1,0 +1,34 @@
+@model PizzaBox.Client.Models.PizzaViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderList[0].OrderId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderList[0].OrderDateTime)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.OrderList)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderDateTime)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

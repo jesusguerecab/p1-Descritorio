@@ -1,0 +1,17 @@
+@model PizzaBox.Domain.Models.User
+
+@{
+    ViewData["Title"] = "Index2";
+}
+
+<h1>USER INDEX2</h1>
+
+<div>@Html.DisplayNameFor(model => model.UserId) : @Html.DisplayFor(model => model.UserId)</div>
+
+<div>@Html.DisplayNameFor(model => model.FirstName) : @Html.DisplayFor(model => model.FirstName)</div>
+
+<div>@Html.DisplayNameFor(model => model.LastName) : @Html.DisplayFor(model => model.LastName)</div>
+
+<div>@Html.DisplayNameFor(model => model.UserAddress) : @Html.DisplayFor(model => model.UserAddress)</div>
+
+<a asp-controller="OrderUser" asp-action="Index" asp-route-id=@Model.UserId>View Orders</a> | <a asp-controller="Store" asp-action="Index">Start Order</a>

@@ -1,0 +1,46 @@
+@model PizzaBox.Client.Models.PizzaViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PizzaList[0].PizzaId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PizzaList[0].PizzaName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PizzaList[0].PizzaDetails)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PizzaList[0].PizzaPrice)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.PizzaList)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PizzaId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PizzaName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PizzaDetails)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PizzaPrice)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

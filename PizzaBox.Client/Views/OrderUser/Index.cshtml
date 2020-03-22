@@ -1,0 +1,22 @@
+@model PizzaBox.Domain.Models.User;
+
+@{
+    ViewData["Title"] = "OrderUser";
+}
+
+<h1>VIEW ORDERS</h1>
+
+<div>@Html.DisplayNameFor(model => model.UserId) : @Html.DisplayFor(model => model.UserId)</div>
+
+<div>@Html.DisplayNameFor(model => model.FirstName) : @Html.DisplayFor(model => model.FirstName)</div>
+
+<div>@Html.DisplayNameFor(model => model.LastName) : @Html.DisplayFor(model => model.LastName)</div>
+
+<div>@Html.DisplayNameFor(model => model.UserAddress) : @Html.DisplayFor(model => model.UserAddress)</div>
+
+<div>
+  @foreach (var item in Model.Orders)
+  {
+    <div>OrderId : @item.OrderId</div>
+  }
+</div>
